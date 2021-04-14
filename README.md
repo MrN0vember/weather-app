@@ -1,6 +1,7 @@
 # Exercise - Weather App
 A weather forecasting application created using front end framework React
 
+
 ## Concepts
 * React
 * JSX
@@ -13,3 +14,4 @@ A weather forecasting application created using front end framework React
 * React Testing Library
 * Request/Response
 * Error Handling
+
