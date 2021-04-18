@@ -23,4 +23,8 @@ describe("ForecastSummaries", () => {
       },
     },
   ];
+  it("redners correctly", () => {
+    const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
