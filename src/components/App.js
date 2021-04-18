@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 
-function App(props) {
-  const { location, forecasts } = props;
+const App = ({ forecasts, location }) => {
   return (
     <div className="App">
       <h1>Weather App</h1>
@@ -13,7 +12,7 @@ function App(props) {
       <ForecastSummaries forecasts={forecasts} />
     </div>
   );
-}
+};
 
 App.propTypes = {
   forecasts: PropTypes.arrayOf(

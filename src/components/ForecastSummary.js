@@ -5,7 +5,7 @@ const ForecastSummary = (props) => {
   const { date, icon, temperature, description } = props;
 
   return (
-    <div className="forecast-summary">
+    <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary_date">{date}</div>
       <div className="forecast-summary_icon" data-testid="forecast-icon">
         {icon}
