@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import LocationDetails from "../../components/LocationDetails";
+import ForecastDetails from "../../components/ForecastDetails";
 
 describe("LocationDetails", () => {
   it("renders the correct city and location props", () => {
