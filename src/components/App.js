@@ -10,6 +10,10 @@ const App = ({ forecasts, location }) => {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <div className="App">
       <h1>Weather App</h1>
