@@ -4,31 +4,42 @@ import ForecastSummaries from "../../components/ForecastSummaries";
 
 describe("ForecastSummaries", () => {
   const validProps = [
-    {
-      date: 1111111,
-      description: "Stub description 1",
-      icon: "stubIcon1",
-      temperature: {
-        max: 22,
-        min: 12,
+      {
+        date: 1111111,
+        description: "Stub description 1",
+        icon: "stubIcon1",
+        temperature: {
+          max: 22,
+          min: 12,
+        },
       },
-    },
-    {
-      date: 2222222,
-      description: "Stub descrtiption2",
-      icon: "stubIcon2",
-      temperature: {
-        max: 24,
-        min: 13,
+      {
+        date: 2222222,
+        description: "Stub descrtiption2",
+        icon: "stubIcon2",
+        temperature: {
+          max: 24,
+          min: 13,
+        },
       },
-    },
-  ];
-  it("redners correctly", () => {
-    const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
+    ];
+
+  it("renders correctly", () => {
+    const { asFragment } = render(
+      <ForecastSummaries
+        forecasts={validProps.forecasts}
+        onForecastSelect={validProps.onForecastSelect}
+      />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
   it("renders the correct number of ForecastSummary Instaces", () => {
-    const { getAllByTestId } = render(<ForecastSummaries forecasts={validProps} />);
+    const { getAllByTestId } = render(
+      <ForecastSummaries
+        forecasts={validProps.forecasts}
+        onForecastSelect={validProps.onForecastSelect}
+      />
+    );
     expect(getAllByTestId("forecast-summary")).toHaveLength(2);
   });
 });

@@ -10,13 +10,13 @@ const App = ({ forecasts, location }) => {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
 
   return (
-    <div className="App">
-      <h1>Weather App</h1>
+    <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries
         forecasts={forecasts}
@@ -32,7 +32,7 @@ App.propTypes = {
     PropTypes.shape({
       date: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.number,
+      icon: PropTypes.string,
       temperature: PropTypes.shape({
         max: PropTypes.number,
         min: PropTypes.number,
